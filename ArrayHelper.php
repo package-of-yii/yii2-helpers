@@ -261,11 +261,11 @@ class ArrayHelper extends BaseArrayHelper
      * Flatten a multi-dimensional array into a single level.
      *
      * @param  array $array
-     * @param  int $depth
+     * @param string $separator
      *
      * @return array
      */
-    public static function flatten($array, $depth = INF)
+    public static function flatten($array, $separator = '.'): array
     {
         $result = [];
 
@@ -273,12 +273,7 @@ class ArrayHelper extends BaseArrayHelper
             $item = $item instanceof Collection ? $item->all() : $item;
 
             if (is_array($item)) {
-                if ($depth === 1) {
-                    $result = array_merge($result, $item);
-                    continue;
-                }
-
-                $result = array_merge($result, static::flatten($item, $depth - 1));
+                $result = array_merge($result, static::flatten($item, $separator));
                 continue;
             }
 

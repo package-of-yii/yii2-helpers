@@ -1,5 +1,5 @@
 {
-    "name": "yii2mod/yii2-helpers",
+    "name": "package-of-yii/yii2-helpers",
     "description": "Collection of useful helper functions for Yii Framework 2.0",
     "type": "yii2-extension",
     "keywords": [
@@ -12,6 +12,10 @@
         {
             "name": "Igor Chepurnoy",
             "email": "igorzfort@gmail.com"
+        },
+        {
+            "name": "Pralhad Kumar Shrestha",
+            "email": "pralhad.shrestha05@gmail.com"
         }
     ],
     "require": {
